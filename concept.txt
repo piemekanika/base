@@ -1,0 +1,39 @@
+# only that comments 
+
+# assigning a variable 
+declare variable X: TypeName
+
+assign X 123
+
+declare variable Y assign 123
+
+declare const Z assign 123
+
+
+# conditions 
+when /* condition */ do
+    /* code */ 
+
+
+# objects 
+declare type User assign {
+    username String
+    email String
+    id String
+}
+declare variable Obj: User assign {
+    username 'boo-ga-ga'
+    email 'boo@gmail.com'
+    id '1'
+}
+
+# types can be use AND and NOT operations 
+declare type GreatUser assign User AND { reasonForGreatness String }
+declare type NewUser assign User AND NOT { id }
+
+# Q: what about type casting? 
+# basic type cast
+assume UnknownVar is GreatUser
+
+# imports
+from 'package' import SomeExportedThing
