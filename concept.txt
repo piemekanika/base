@@ -14,6 +14,7 @@ declare const Z assign 123
 when /* condition */ do
     /* code */ 
 
+# Q: what's about switch-case ??
 
 # objects 
 declare type User assign {
@@ -21,6 +22,7 @@ declare type User assign {
     email String
     id String
 }
+
 declare variable Obj: User assign {
     username 'boo-ga-ga'
     email 'boo@gmail.com'
@@ -37,3 +39,8 @@ assume UnknownVar is GreatUser
 
 # imports
 from 'package' import SomeExportedThing
+
+# generic types draft
+# idea is type as a function
+declare type KeyToDataMap(T) assign { key T }
+
